@@ -1,0 +1,65 @@
+export const theme = {
+  colors: {
+    bg: "#0f1115",
+    surface: "#181b22",
+    surfaceAlt: "#20242e",
+    border: "#2a2f3a",
+    text: "#f2f3f5",
+    textMuted: "#9aa0ac",
+    primary: "#ffcb05",
+    primaryDark: "#3b4cca",
+    danger: "#e3350d",
+    success: "#4caf50",
+    online: "#4caf50",
+    offline: "#e3350d",
+  },
+  radius: {
+    sm: "6px",
+    md: "12px",
+    lg: "20px",
+    round: "999px",
+  },
+  shadow: {
+    card: "0 2px 8px rgba(0, 0, 0, 0.35)",
+    hover: "0 6px 20px rgba(0, 0, 0, 0.45)",
+  },
+  breakpoints: {
+    sm: "480px",
+    md: "768px",
+    lg: "1080px",
+    xl: "1320px",
+  },
+};
+
+export const typeColors = {
+  normal: "#A8A77A",
+  fire: "#EE8130",
+  water: "#6390F0",
+  electric: "#F7D02C",
+  grass: "#7AC74C",
+  ice: "#96D9D6",
+  fighting: "#C22E28",
+  poison: "#A33EA1",
+  ground: "#E2BF65",
+  flying: "#A98FF3",
+  psychic: "#F95587",
+  bug: "#A6B91A",
+  rock: "#B6A136",
+  ghost: "#735797",
+  dragon: "#6F35FC",
+  dark: "#705746",
+  steel: "#B7B7CE",
+  fairy: "#D685AD",
+};
+
+export const generations = [
+  { id: 1, name: "Generación I", range: [1, 151] },
+  { id: 2, name: "Generación II", range: [152, 251] },
+  { id: 3, name: "Generación III", range: [252, 386] },
+  { id: 4, name: "Generación IV", range: [387, 493] },
+  { id: 5, name: "Generación V", range: [494, 649] },
+  { id: 6, name: "Generación VI", range: [650, 721] },
+  { id: 7, name: "Generación VII", range: [722, 809] },
+  { id: 8, name: "Generación VIII", range: [810, 905] },
+  { id: 9, name: "Generación IX", range: [906, 1025] },
+];
