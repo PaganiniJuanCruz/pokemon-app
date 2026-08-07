@@ -64,12 +64,12 @@ Búsqueda y filtros se guardan en query params (`?search=&types=&gen=`) para que
 
 Cada endpoint tiene un `keepUnusedDataFor` ajustado a qué tan estático es ese dato:
 
-| Endpoint | keepUnusedDataFor | Motivo |
-|---|---|---|
-| `getPokemonByName` / especie | 1 hora | Datos de un Pokémon puntual, prácticamente inmutables |
-| `getPokemonByType`, `getGenerationDetail` | 1 hora | Cambian solo si la PokeAPI agrega Pokémon nuevos |
-| `getPokemonMasterList` | 6 horas | Lista completa, muy pesada de recalcular |
-| `getTypesList`, `getGenerationsList` | 24 horas | Catálogos fijos (18 tipos, 9 generaciones) |
+| Endpoint                                  | keepUnusedDataFor | Motivo                                                |
+| ----------------------------------------- | ----------------- | ----------------------------------------------------- |
+| `getPokemonByName` / especie              | 1 hora            | Datos de un Pokémon puntual, prácticamente inmutables |
+| `getPokemonByType`, `getGenerationDetail` | 1 hora            | Cambian solo si la PokeAPI agrega Pokémon nuevos      |
+| `getPokemonMasterList`                    | 6 horas           | Lista completa, muy pesada de recalcular              |
+| `getTypesList`, `getGenerationsList`      | 24 horas          | Catálogos fijos (18 tipos, 9 generaciones)            |
 
 Se usan **tags** (`Pokemon`, `MasterList`, `Types`, `Generations`, `TypeFilter`, `GenerationFilter`) para invalidación selectiva. El botón "Actualizar" en la Pokédex dispara `pokemonApi.util.invalidateTags(...)` como demostración de refetch manual, ya que en la práctica la PokeAPI casi no cambia.
 
